@@ -1,4 +1,4 @@
-package com.ermu.reflect.entity;
+package com.ermu.thread.entity;
 
 /**
  * @author：xusonglin

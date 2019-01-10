@@ -1,4 +1,4 @@
-package com.ermu.reflect.annotation;
+package com.ermu.thread.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

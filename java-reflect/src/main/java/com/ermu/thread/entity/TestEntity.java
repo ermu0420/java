@@ -1,8 +1,8 @@
-package com.ermu.reflect.entity;
+package com.ermu.thread.entity;
 
-import com.ermu.reflect.annotation.ClassAnnotation;
-import com.ermu.reflect.annotation.FieldAnnotation;
-import com.ermu.reflect.annotation.MenthodAnnotation;
+import com.ermu.thread.annotation.ClassAnnotation;
+import com.ermu.thread.annotation.FieldAnnotation;
+import com.ermu.thread.annotation.MenthodAnnotation;
 
 /**
  * @author：xusonglin

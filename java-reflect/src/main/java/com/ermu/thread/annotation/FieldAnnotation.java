@@ -1,4 +1,4 @@
-package com.ermu.reflect.annotation;
+package com.ermu.thread.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -10,10 +10,10 @@ import java.lang.annotation.Target;
  * ===============================
  * Created with IDEA.
  * Date：2019/1/10
- * Time：14:17
+ * Time：14:23
  * ================================
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(value = {ElementType.TYPE})
-public @interface ClassAnnotation {
+@Target(value = {ElementType.FIELD})
+public @interface FieldAnnotation {
 }
