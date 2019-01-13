@@ -1,0 +1,29 @@
+多线程
+	开发中主要的问题：
+		1.死锁
+		2.同步
+		3.通信
+		4.资源限制
+
+	导致线程安全问题：
+		1.死锁
+		2.不同步
+
+	线程状态
+		初始(NEW)：新创建了一个线程对象，但还没有调用start()方法。
+		运行(RUNNABLE):处于可运行状态的线程正在JVM中执行，但它可能正在等待来自操作系统的其他资源，例如处理器。
+		阻塞(BLOCKED)：线程阻塞于synchronized锁，等待获取synchronized锁的状态。
+		等待(WAITING)：Object.wait()、join()、 LockSupport.park(),进入该状态的线程需要等待其他线程做出一些特定动作（通知或中断）。
+		超时等待(TIME_WAITING)：Object.wait(long)、Thread.join()、LockSupport.parkNanos()、LockSupport.parkUntil，该状态不同于WAITING，
+		它可以在指定的时间内自行返回。
+		终止(TERMINATED)：表示该线程已经执行完毕。
+	线程挂起跟恢复
+		被废弃的方法
+			thread.suspend() 该方法不会释放线程所占用的资源。如果使用该方法将某个线程挂起，则可能会使其他等待资源的线程死锁
+			thread.resume() 方法本身并无问题，但是不能独立于suspend()方法存在
+		可以使用的方法
+			wait() 暂停执行、放弃已经获得的锁、进入等待状态
+			notify() 随机唤醒一个在等待锁的线程
+			notifyAll() 唤醒所有在等待锁的线程，自行抢占cpu资源
+	守护
+		一般线程为用户线程，当JVM实例中最后一个非守护线程结束时，也随JVM一起退出
